@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-butler-stencil: "ButlerStencil", serif;
+  --font-raileway: "Raileway", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,9 +17,11 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-raileway); /* Police par défaut pour tout le site */
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-butler-stencil); /* Police pour les titres */
 }
 
 @layer utilities {

@@ -1,0 +1,59 @@
+{
+    "services": [
+      {
+        "title": "CREEZ VOTRE COSTUME",
+        "image": "/images/services_custom.webp",
+        "description": "Venez dans notre boutique en ligne pour créez votre costume par vous-même!",
+        "button": "CREEZ VOTRE COSTUME"
+      },
+      {
+        "title": "PRENEZ RENDEZ-VOUS",
+        "image": "/images/services_meet.webp",
+        "description": "vous préférez l’avis d’un expert? A domicile ou en boutique nos tailleurs  vous conseillent",
+        "button": "PRENEZ RENDEZ-VOUS"
+    },
+      {
+        "title": "AJUSTEZ VOS COSTUMES",
+        "image": "/images/services_tailleur.webp",
+        "description": "Avec le temps, Vos mensurations changent, et vos costumes doivent suivre.on s’occupe d’eux pour vous",
+        "button":"PRENEZ RENDEZ-VOUS"
+      },
+      {
+        "title": "REJOIGNEZ LE CLUB",
+        "image": "/images/services_club.webp",
+        "description": "Devenez membre, enregistrez et modifiez vos mensurations et vos coordonnées et suivez vos commandes",
+        "button":"CREEZ VOTRE COMPTE"
+      }
+    ],
+    "costumes": [
+      {
+        "button": "CREEZ VOTRE COSTUME 3 PIECES",
+        "image": "/images/costume_trois_pieces.webp"
+      },
+      {
+        "button": "CREEZ VOTRE COSTUME 2 PIECES",
+        "image": "/images/costume_deux_pieces.webp"
+      },
+      {
+        "button": "CREEZ VOTRE PIECE UNIQUE",
+        "image": "/images/costume_mixed_separate_pieces.webp"
+        }
+    ],
+    "tailleurs": [
+      {
+        "name": "Peter Mason",
+        "portrait": "/images/boutique_peter_mason.webp",
+        "description": "L'aîné des frères Mason, Peter a un style de costume très British et est un expert en couture. Il y a 20 ans, cet anglais tombe amoureux de Paris, s'y installe et ouvre la boutique Mason and Mason en demandant à son frère de le rejoindre. Depuis l'équipe s'est agrandi avec Bienvenu Kitoko qui l'est a rejoint, et le succès de la boutique a mené à une présence en ligne avec le site Infinite suits "
+      },
+      {
+        "name": "Vincent Mason",
+        "portrait": "/images/boutique_vincent_mason.webp",
+        "description": " Vincent est le cadet des frères Mason et également expert en couture. Partenaire de son frère depuis 20 ans, c'est un innovateur qui veut rendre le costume sur mesure au plus grand nombre et diversifier les possibilités de créations dans le travail de couture. C'est aussi l'auteur de la nouvelle collection de costumes sur mesure Infinite Suits. "
+      },
+      {
+        "name": "Bienvenu Kitoko",
+        "portrait": "/images/boutique_bienvenu_kitoko.webp",
+        "description": "Nouveau dans la team, Bienvenu est un jeune tailleur formé par Vincent Mason et Peter Mason. Il est aussi expert en couture et a une passion pour la mode. Venant de la culture de la sape, il saura répondre aux demandes classiques et mais aussi aux styles les plus modernes et originaux."
+      }
+    ]
+  }
