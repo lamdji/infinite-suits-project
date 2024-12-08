@@ -11,12 +11,14 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        accueilBg: "#7A746E",
         gold: "#BF9768",
         secondGold:'#BE9667',
+        powderWhite: '#F5F4F3',
+        grayBrown:'#7A746E',
       },
       fontFamily: {
-        wavy: ['"Wavy"', "sans-serif"],
+        butler: ["var(--font-butler)", "serif"],
+        raleway: ["var(--font-raleway)", "sans-serif"],
       },
     },
   },

@@ -1,0 +1,116 @@
+// This is your Prisma schema file
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+url      = env("DATABASE_URL")
+}
+
+// Table User
+model User {
+  id          Int          @id @default(autoincrement())
+  email       String       @unique
+  password    String
+  prenom      String
+  nom         String
+  adresse     String
+  code_postal String
+  ville       String
+  cree_le     DateTime     @default(now())
+  mesures     Mesure[]
+  commandes   Commande[]
+  rendezvous  RendezVous[]
+  @@map("user")
+}
+
+// Table Boutons
+model Bouton {
+  bouton_id Int     @id @default(autoincrement())
+  type      String
+  couleur   String?
+  prix      Float?
+  @@map("bouton")
+}
+
+// Table Fils
+model Fil {
+  fil_id  Int     @id @default(autoincrement())
+  type    String
+  couleur String?
+  prix    Float?
+}
+
+// Table Tissus
+model Tissu {
+  tissu_id Int    @id @default(autoincrement())
+  nom      String
+  prix     Float
+  @@map("tissu")
+}
+
+// Table Commandes
+model Commande {
+  commandes_id   Int        @id @default(autoincrement())
+  user           User       @relation(fields: [user_id], references: [id])
+  user_id        Int
+  mesures        Mesure     @relation("CommandeToMesure", fields: [mesures_id], references: [mesures_id])
+  mesures_id     Int
+  adresses_id    Int
+  commandes_date DateTime   @default(now())
+  status         String     @default("en cours")
+  total          Float
+  paiements      Paiement[]
+  @@map("commande")
+}
+
+// Table Mesures
+model Mesure {
+  mesures_id Int        @id @default(autoincrement())
+  user       User       @relation(fields: [user_id], references: [id])
+  user_id    Int
+  manches    Float
+  epaules    Float
+  poitrine   Float
+  ventre     Float
+  jambe      Float
+  taille     Float
+  hanche     Float
+  cuisse     Float
+  cree_le    DateTime   @default(now())
+  commandes  Commande[] @relation("CommandeToMesure")
+  @@map("mesure")
+}
+
+// Table Paiements
+model Paiement {
+  paiement_id   Int      @id @default(autoincrement())
+  commande      Commande @relation(fields: [commande_id], references: [commandes_id])
+  commande_id   Int
+  montant       Float
+  methode       String
+  date_paiement DateTime
+  statut        String
+  @@map("paiement")
+}
+
+// Table RendezVous
+model RendezVous {
+  rendezvous_id Int      @id @default(autoincrement())
+  user          User     @relation(fields: [user_id], references: [id])
+  user_id       Int
+  tailleur_id   Int
+  date_rdv      DateTime
+  lieu          String
+  adresse_rdv   String
+  statut        String
+  @@map("rendezvous")
+}
+
+// Table Veste
+model Veste {
+  veste_id Int    @id @default(autoincrement())
+  type     String
+  @@map("veste")
+}

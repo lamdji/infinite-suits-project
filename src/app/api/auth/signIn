@@ -1,0 +1,16 @@
+import { signIn } from "next-auth/react";
+
+export default function Connection() {
+  return 
+  {(
+    <div className="flex flex-col items-center justify-center h-screen">
+      <h1 className="text-2xl font-bold mb-6">Se connecter</h1>
+      <button
+        onClick={(google) => signIn("google")}
+        className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+      >
+        Continuer avec Google
+      </button>
+    </div>
+  );
+  }

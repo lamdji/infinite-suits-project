@@ -1,20 +1,10 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { butler, ralewayRegular } from "./fonts";
 import Image from "next/image";
+import FirstNavbar from "./components/FirstNavbar";
 import "./globals.css";
 
-const butlerStencil = localFont({
-  src: "./fonts/Butler.woff",
-  variable: "--font-butler",
-  weight: "400",
-  style: "normal",
-});
-const ralewayRegular = localFont({
-  src: "./fonts/Raleway-Regular.woff",
-  variable: "--font-Raleway-Regular",
-  weight: "400",
-  style: "normal",
-});
+
 export const metadata: Metadata = {
   title: "Infinite Suits",
   description: "Site de vente de costumes sur mesure pour hommes.",
@@ -32,10 +22,11 @@ export default function Root({
       </head>
       <body
         className={`
-          ${butlerStencil.variable}
-          ${ralewayRegular.variable}antialiased`}
+          ${butler.variable}
+          ${ralewayRegular.variable} antialiased bg-powderWhite`}
       >
-        <main className="text-gray-800">
+        <FirstNavbar />
+        <main className="text-gray-800 max-w-7xl mt-10 m-auto mb-14">
           {children}
         </main>
       {/* Footer */}
