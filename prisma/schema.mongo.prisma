@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/mongo-client"
+}
+
+datasource mongodb {
+  provider = "mongodb"
+  url      = env("DATABASE_URL_MONGO")
+}
+
+
+model Mesure {
+  id                  String   @id @default(auto()) @map("_id") @mongodb.ObjectId
+  user_id             Int
+  commande_id         Int
+  manches             Float
+  epaules             Float
+  poitrine            Float
+  ventre              Float
+  jambes              Float
+  taille              Float
+  hanche              Float
+  cuisse              Float
+  date_enregistrement DateTime @default(now())
+}
+
+
+model Personnalisation {
+  id                  String   @id @default(auto()) @map("_id") @mongodb.ObjectId
+  commande_id         Int      // Référence la commande en MySQL
+  type_produit        String   // Veste, pantalon, gilet, costume 2 pièces, costume 3 pièces
+  tissu               String   // Bleu marine, Bordeaux, Gris
+  couleur_boutons     String   // Blanc, Noir, Beige
+  couleur_fils        String   // Bleu marine, Bordeaux, Gris
+  personnalisations   Json     // Stocke toutes les personnalisations spécifiques sous format JSON
+  date_personnalisation DateTime @default(now())
+}

@@ -1,4 +1,4 @@
-{
+{ 
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -13,14 +13,23 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "strictNullChecks": false, 
     "plugins": [
       {
         "name": "next"
       }
     ],
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/types/*": ["./src/types/*"] 
+      "@/components/*": ["src/api/components/*"],
+      "@/dataTailors": ["lib/dataTailors"],
+      "@/data":["public/data.json"],
+      "@/lib/*": ["lib/*"],
+      "@/context/*": ["src/context/*"],
+      "@/types/*": ["src/types/*"],
+      "@/TailorList/*":["src/app/components/TailorList"],
+      
+
     }
   },
   "include": [
@@ -28,7 +37,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/testPrisma/test-prisma.ts" 
-, "src/app/testbcrypt.js"  ],
+    "testPrisma/test-prisma.ts",
+    "tests/utilitaires/testbcrypt.js"
+  ],
   "exclude": ["node_modules"]
 }

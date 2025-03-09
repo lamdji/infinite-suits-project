@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-import data from "../data.json";
+import data from "@/data";
 
 export default function Accueil() {
   return (
@@ -8,7 +8,7 @@ export default function Accueil() {
       {/* Section "Découvrez la vraie qualité" */}
       <section className="relative py-12 px-6">
         <div className="flex">
-          <Image className="w- h-auto" src="/images/services_custom.webp" alt="image tailleur" width={500} height={550} />
+          <Image className="w- h-auto" src="/images/boutique_entree.webp" alt="image boutique" width={500} height={550} />
           <div className="mx-6">
             <h2 className="text-3xl font-bold">Découvrez la vraie qualité</h2>
             <div className=" w-full flex  items-center mt-4">

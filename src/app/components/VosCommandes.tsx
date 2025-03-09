@@ -1,5 +1,5 @@
 import React from 'react';
-import { Commande } from '@/types';
+import { Commande } from '@/types/index';
 
 type VosCommandesProps = {
   commandes: Commande[];

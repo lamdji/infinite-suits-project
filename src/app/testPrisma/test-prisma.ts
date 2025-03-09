@@ -6,8 +6,8 @@ const prisma = new PrismaClient();
 
 async function main() {
   console.log("Prisma Client Initialized");
-  const users = await prisma.user.findMany(); 
-  console.log(users);
+  const user = await prisma.user.findMany(); 
+  console.log(user);
 }
 
 main()
