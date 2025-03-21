@@ -14,9 +14,9 @@ export default function Accueil() {
             <div className=" w-full flex  items-center mt-4">
                 <h3 className="text-secondGold text-2xl uppercase mr-4">costume fait main</h3>
                 {/* Losange au centre */}
-                <div className=" w-4 h-4 border-secondGold border-[2px] rotate-45"></div>
+                <div className=" w-4 h-4 border-secondGold border-[4px] rotate-45"></div>
                 {/* Ligne à droite */}
-                <div className=" flex-grow border-[1px] border-secondGold"></div>
+                <div className=" flex-grow border-[3px] border-secondGold"></div>
             </div>
 
             <p className="mt-4 text-gray-600 leading-6">
@@ -34,14 +34,14 @@ export default function Accueil() {
         <div className=" w-full h-[36px] flex justify-center items-center mb-20">
               <div className=" w-full flex items-center m-6">
                   {/* Ligne à gauche */}
-                  <div className="flex-grow h-[2px]  bg-secondGold"></div>
+                  <div className="flex-grow h-[4px]  bg-secondGold"></div>
                   {/* Losange au centre */}
-                  <div className=" w-4 h-4 border-secondGold border-[2px] rotate-45"></div>
+                  <div className=" w-4 h-4 border-secondGold border-[4px] rotate-45"></div>
                   <h3 className="text-secondGold text-2xl uppercase mx-4">nos services</h3>
                   {/* Losange au centre */}
-                  <div className=" w-4 h-4 border-secondGold border-[2px] rotate-45"></div>
+                  <div className=" w-4 h-4 border-secondGold border-[4px] rotate-45"></div>
                   {/* Ligne à droite */}
-                  <div className="flex-grow h-[2px] bg-secondGold"></div>
+                  <div className="flex-grow h-[4px] bg-secondGold"></div>
               </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-6">
